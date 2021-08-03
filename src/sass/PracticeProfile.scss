@@ -1,0 +1,114 @@
+.practice-profile {
+  display: flex;
+  flex-direction: column;
+  // border: $Border;
+  width: 90%;
+  margin: 25px auto;
+  align-items: center;
+
+  .profile {
+    // border: $Border;
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+    align-items: center;
+    .MuiSvgIcon-root {
+      height: 50px;
+      width: 50px;
+      color: $LightSeaBlue;
+      cursor: pointer;
+    }
+    h1 {
+      font-weight: 400;
+    }
+  }
+
+  .profile-select-range {
+    .update-status {
+      img {
+        height: 18px;
+        width: 18px;
+        margin-right: 8px;
+      }
+      display: flex;
+      align-items: center;
+      .MuiSvgIcon-root {
+        cursor: pointer;
+        color: $LightSeaBlue;
+        margin-left: 8px;
+      }
+    }
+    .select-ranges {
+      // border: $Border;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .select-container {
+        display: flex;
+        align-items: center;
+        label {
+          margin-right: 10px;
+          font-size: 14px;
+        }
+        .selects {
+          display: flex;
+          align-items: center;
+          // border: $Border;
+          position: relative;
+          select {
+            appearance: none;
+            height: 35px;
+            width: 100%;
+            outline: none;
+            padding-left: 15px;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 8px;
+          }
+          .select-date {
+            height: 35px;
+            border-radius: 8px;
+            outline: none;
+            appearance: none;
+          }
+          .MuiSvgIcon-root {
+            position: absolute;
+            right: 5px;
+            color: $DarkGray;
+          }
+        }
+        .selects.one {
+          width: 100px;
+        }
+        .selects.two {
+          width: 60px;
+        }
+        .react-datepicker__input-container {
+          input {
+            height: 33px;
+            width: 100px;
+            border-radius: 8px;
+            padding-left: 12px;
+            outline: none;
+            border: 1px solid $DarkGray;
+          }
+        }
+        @media (min-width: 768px) {
+          margin-right: 10px;
+        }
+      }
+      @media (min-width: 768px) {
+        flex-direction: row;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    .update-status {
+      margin-left: 340px;
+    }
+  } 
+}

@@ -1,0 +1,81 @@
+@import './Colors.scss';
+$Border: 1px solid black;
+
+.navbar {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // border: 1px solid black;
+  padding: 1rem;
+  margin: 0 auto;
+  .logo-title {
+    color: $LightSeaBlue;
+    font-weight: 400;
+  }
+  .practices {
+    display: none;
+    align-items: center;
+    position: relative;
+    // border: $Border;
+    p {
+      font-weight: 800;
+      margin-right: 10px;
+    }
+    .select-container {
+      height: 30px;
+      width: 200px;
+      border: $Border;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      justify-content: center;
+      position: relative;
+      select {
+        height: 100%;
+        margin-right: 10px;
+        appearance: none;
+        border: none;
+        color: $DarkGray;
+        outline: none;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .MuiSvgIcon-root {
+        color: $DarkGray;
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+      }
+    }
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+  .user-container {
+    // border: $Border;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $DarkGray;
+    width: 50%;
+    max-width: 300px;
+    p {
+      cursor: pointer;
+      display: none;
+    }
+    .MuiSvgIcon-root{
+      height: 30px;
+      width: 30px;
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      p {
+        display: flex;
+      }
+    }
+  }
+}

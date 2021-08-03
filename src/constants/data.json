@@ -1,0 +1,43 @@
+{
+  "dentalName": "Affinity Dental",
+  "address": "234, Stevens Creek, San Jose, CA, 95182",
+  "speciality": {
+    "type": "General Dentist",
+    "operatories": 3
+  },
+  "active": {
+    "activePatients": 3289,
+    "newPatients": 50
+  },
+  "recall": {
+    "recallPatients": 200,
+    "treatmentPlans": 3289
+  },
+  "dentists": [
+    {
+      "name": "Dr. Ryan Smith",
+      "speciality": "General Dentist",
+      "NPI": "0123456789"
+    },
+    {
+      "name": "Dr. Tim McCarthy",
+      "speciality": "Pedodontist",
+      "NPI": "0123456789"
+    }
+  ],
+  "hygenists": [
+    {
+      "name": "Sarah Downstorm",
+      "NPI": "0123456789"
+    },
+    {
+      "name": "Ashley Brown",
+      "NPI": "0123456789"
+    }
+  ],
+  "software": {
+    "management": "Open Dental V2",
+    "finance": "QuickBooks"
+  },
+  "customerId": "D62493"
+}

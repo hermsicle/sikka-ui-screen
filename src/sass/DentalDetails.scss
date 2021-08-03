@@ -1,0 +1,25 @@
+.dental-details-container {
+  // border: $Border;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  p {
+    line-height: 1.75rem;
+  }
+  .text-gray {
+    color: $DarkGray;
+  }
+  .align-right {
+    text-align: right;
+  }
+  .container {
+    padding: 1rem;
+  }
+  .container.flex-row {
+    display: flex;
+    justify-content: space-between;
+    // border: $Border;
+    padding: 1rem;
+  }
+
+}
