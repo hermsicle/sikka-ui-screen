@@ -6,10 +6,12 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+    margin-bottom: 50px;
     .graph-selects {
       display: flex;
       justify-content: space-between;
       width: 80%;
+      max-width: 400px;
       align-items: center;
       // border: $Border;
       p {
@@ -135,12 +137,138 @@
         text-align: right;
       }
     }
+    .graph-center {
+      height: 100%;
+      width: 100%;
+      // border: $Border;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        top: 50%;
+        background: $DarkGray;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        background: $DarkGray;
+        left: 50%;
+      }
+    }
+    .top-bubble-set {
+      // border: $Border;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      position: absolute;
+      top: 10%;
+      .bubble {
+        font-size: 10px;
+        border: $Border;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 100%;
+        position: relative;
+        box-shadow: 2px 2px 5px $DarkGray;
+      }
+      .bubble.one {
+        background: lavender;
+        border: 5px solid cornflowerblue;
+        top: 20px;
+        left: -10%;
+        // &::after {
+        //   content: "";
+        //   position: absolute;
+        //   height: 196px;
+        //   width: 1px;
+        //   border-left: 1px dashed cornflowerblue;
+        //   top: 100%;
+        // }
+        // &::before {
+        //   content: "";
+        //   position: absolute;
+        //   width: 80px;
+        //   height: auto;
+        //   border-top: 1px dashed cornflowerblue;
+        //   left: -80px;
+        // }
+      }
+      .bubble.two {
+        background: #fbf2f2;
+        border: 2px solid #cfbbb6;
+        top: 40px;
+        left: -23%;
+      }
+      .bubble.three {
+        background: linen;
+        border: 2px solid darksalmon;
+        top: 20px;
+        left: -10%;
+      }
+    }
+    .bottom-bubble-set {
+      // border: $Border;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      position: absolute;
+      top: 60%;
+      .bubble {
+        font-size: 10px;
+        border: $Border;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 100%;
+        position: relative;
+        box-shadow: 2px 2px 5px $DarkGray;
+      }
+      .bubble.four {
+        background: ghostwhite;
+        border: 2px solid #e3c8f8;
+        left: -12%;
+      }
+      .bubble.five {
+        background: aliceblue ;
+        border: 2px solid cornflowerblue;
+        left: -22%;
+        top: 30px;
+      }
+      .bubble.six {
+        background: mintcream;
+        border: 2px solid powderblue;
+        left: 2%;
+        top: -10px;
+      }
+    }
     @media (min-width: 800px) {
+      margin: 0 auto;
       height: 350px;
     }
     @media (min-width: 1000px) {
       height: 450px;
       width: 80%;
+    }
+    @media (min-width: 1100px) {
+      .top-bubble-set,
+      .bottom-bubble-set {
+        .bubble {
+          height: 70px;
+          width: 70px;
+          padding: 2px;
+        }
+      }
     }
   }
 
