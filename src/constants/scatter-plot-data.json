@@ -1,0 +1,8 @@
+[
+  { "production": 1, "patients": 1000 },
+  { "production": 1.5, "patients": 3000 },
+  { "production": 2, "patients": 2500 },
+  { "production": 2, "patients": 500 },
+  { "production": 3.5, "patients": 3000 },
+  { "production": 4.5, "patients": 1500 }
+]

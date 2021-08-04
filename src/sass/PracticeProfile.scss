@@ -44,6 +44,8 @@
       flex-direction: column;
       align-items: center;
       .select-container {
+        // border: $Border;
+        margin: 10px;
         display: flex;
         align-items: center;
         label {
@@ -92,9 +94,6 @@
             outline: none;
             border: 1px solid $DarkGray;
           }
-        }
-        @media (min-width: 768px) {
-          margin-right: 10px;
         }
       }
       @media (min-width: 768px) {

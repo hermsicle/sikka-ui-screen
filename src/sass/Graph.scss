@@ -1,7 +1,147 @@
 .graph-container {
   width: 100%;
 
-  @media (min-width: 768px) {
-    width: 50%;
+  .graph-adjust {
+    // border: $Border;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    .graph-selects {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      align-items: center;
+      // border: $Border;
+      p {
+        margin: 0.75rem;
+        font-weight: 800;
+      }
+      .select-container {
+        height: 20px;
+        width: 200px;
+        border: 1px solid $DarkGray;
+        border-radius: 8px;
+        padding: 10px;
+        position: relative;
+        cursor: pointer;
+        .MuiSvgIcon-root {
+          position: absolute;
+          height: 30px;
+          width: 30px;
+          right: 0;
+          color: $DarkGray;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        select {
+          height: 100%;
+          appearance: none;
+          width: 100%;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+    .graph-zoom {
+      display: flex;
+      // border: $Border;
+      align-items: center;
+      justify-content: center;
+      width: 15%;
+      .MuiSvgIcon-root {
+        cursor: pointer;
+        margin: 10px;
+      }
+    }
   }
+
+  .chart-container {
+    height: 300px;
+    width: 95%;
+    border-left: 1px solid $DarkGray;
+    border-bottom: 1px solid $DarkGray;
+    margin: 90px 25px;
+    position: relative;
+    &::after {
+      content: "Adjusted Production";
+      color: $DarkGray;
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+    }
+    &::before {
+      content: "Patients Seen";
+      color: $DarkGray;
+      position: absolute;
+      // transform: translateY(-100%) rotate(-90deg);
+      // top: 50%;
+      top: -30px;
+      left: -40px;
+      font-size: 14px;
+
+      @media (min-width: 800px) {
+        transform: translateY(-100%) rotate(-90deg);
+        top: 50%;
+        left: -90px;
+      }
+    }
+    .MuiSvgIcon-root.top-arrow {
+      left: -6px;
+      top: -2px;
+      transform: rotate(90deg);
+    }
+    .MuiSvgIcon-root {
+      height: 11px;
+      width: 11px;
+      position: absolute;
+      bottom: -6px;
+      right: -5px;
+      color: $DarkGray;
+    }
+    .x-axis {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      // border: $Border;
+      position: absolute;
+      bottom: -20px;
+      p {
+        font-size: 12px;
+        color: $DarkGray;
+        position: relative;
+        &::before {
+          content: "|";
+          position: absolute;
+          top: -10px;
+          left: 50%;
+          font-size: 8px;
+        }
+      }
+    }
+    .y-axis {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      height: 98%;
+      // border: $Border;
+      width: 50px;
+      position: absolute;
+      left: -55px;
+      p {
+        font-size: 12px;
+        color: $DarkGray;
+        text-align: right;
+      }
+    }
+    @media (min-width: 800px) {
+      height: 350px;
+    }
+    @media (min-width: 1000px) {
+      height: 450px;
+      width: 80%;
+    }
+  }
+
 }
